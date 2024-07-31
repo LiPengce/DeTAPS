@@ -1,0 +1,65 @@
+100 sigma Set up uses 1364 ms
+200 sigma Set up uses 2515 ms
+300 sigma Set up uses 3766 ms
+400 sigma Set up uses 5049 ms
+500 sigma Set up uses 6267 ms
+10 extractTime = 64
+10 encryptTime = 366
+10 Trapdoor Time= 14
+10 adjustTime= 2
+10 testTime = 78
+20 extractTime = 128
+20 encryptTime = 690
+20 Trapdoor Time= 14
+20 adjustTime= 14
+20 testTime = 154
+30 extractTime = 192
+30 encryptTime = 1031
+30 Trapdoor Time= 14
+30 adjustTime= 29
+30 testTime = 239
+40 extractTime = 254
+40 encryptTime = 1367
+40 Trapdoor Time= 14
+40 adjustTime= 53
+40 testTime = 329
+50 extractTime = 322
+50 encryptTime = 1714
+50 Trapdoor Time= 14
+50 adjustTime= 74
+50 testTime = 433
+60 extractTime = 383
+60 encryptTime = 2041
+60 Trapdoor Time= 14
+60 adjustTime= 109
+60 testTime = 532
+70 extractTime = 448
+70 encryptTime = 2396
+70 Trapdoor Time= 14
+70 adjustTime= 150
+70 testTime = 654
+80 extractTime = 510
+80 encryptTime = 2724
+80 Trapdoor Time= 14
+80 adjustTime= 192
+80 testTime = 761
+90 extractTime = 582
+90 encryptTime = 3060
+90 Trapdoor Time= 14
+90 adjustTime= 252
+90 testTime = 877
+100 extractTime = 638
+100 encryptTime = 3408
+100 Trapdoor Time= 14
+100 adjustTime= 306
+100 testTime = 1010
+110 extractTime = 700
+110 encryptTime = 3739
+110 Trapdoor Time= 14
+110 adjustTime= 374
+110 testTime = 1145
+120 extractTime = 765
+120 encryptTime = 4077
+120 Trapdoor Time= 14
+120 adjustTime= 440
+120 testTime = 1288

@@ -1,0 +1,581 @@
+/**
+ * 现代CSS重置调整
+ * ================================================== */
+ html {
+    -webkit-text-size-adjust: 100%;
+   
+    &:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
+   
+  body {
+    text-size-adjust: 100%;
+    position: relative;
+   
+    width: 100%;
+    min-height: 100vh;
+   
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
+   
+   
+  /* 箱子大小规范化*/
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+  }
+   
+   
+  /* 没有类的元素将获得默认样式 */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+   
+   
+  /**
+   * CSS重置调整
+   *
+   * http://meyerweb.com/eric/tools/css/reset/
+   * v2.0-modified | 20110126
+   * License: none (public domain)
+   */
+   
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    font-size: 100%;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+  }
+   
+  /* 确保设置一些焦点样式以实现辅助功能*/
+  :focus {
+    outline: 0;
+  }
+   
+  /* 旧版浏览器的 HTML5 显示角色重置 */
+  main,
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+   
+  ol,
+  ul {
+    list-style: none;
+  }
+   
+  blockquote,
+  q {
+    quotes: none;
+   
+    &:before,
+    &:after {
+      content: '';
+      content: none;
+    }
+  }
+   
+  /**
+   * Input Reset
+   */
+  input:required,
+  input {
+    box-shadow: none;
+  }
+   
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+  }
+   
+  input[type=search]::-webkit-search-cancel-button,
+  input[type=search]::-webkit-search-decoration,
+  input[type=search]::-webkit-search-results-button,
+  input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+   
+  input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+   
+  textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+  }
+   
+  input {
+    &:focus {
+      outline: none;
+    }
+  }
+   
+  /**
+   * IE 6/7/8/9 和 Firefox 3 中未定义的正确“内联块”显示.
+   */
+  audio,
+  canvas,
+  video {
+    display: inline-block;
+    max-width: 100%;
+  }
+   
+  /**
+   * 防止现代浏览器在没有控件的情况下显示“音频”。
+   * 删除 iOS 5 设备中的多余高度。
+   */
+  audio:not([controls]) {
+    display: none;
+    height: 0;
+  }
+   
+  /**
+   * IE 7/8/9、Firefox 3 和 Safari 4 中不存在的地址样式.
+   */
+  [hidden] {
+    display: none;
+  }
+   
+  /**
+   * 提高了聚焦时的可读性，鼠标悬停在所有浏览器中。
+   */
+  a:active,
+  a:hover {
+    outline: none;
+  }
+   
+  /* 使图像更易于处理*/
+  img {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+  }
+   
+  /* 使图片更易于处理 */
+  picture {
+    display: inline-block;
+  }
+   
+  /**
+   *解决 Firefox 3+ 在 'input' 上使用 '！important' 设置 'line-height' 的问题
+   * UA 样式表.
+   */
+  button,
+  input {
+    line-height: normal;
+  }
+   
+  /**
+   *解决“button”和“select”的“文本转换”继承不一致的问题.
+   * 所有其他窗体控件元素不继承“text-transform”值.
+   * 更正 Chrome、Safari 5+ 和 IE 6+ 中的“按钮”样式继承.
+   *更正 Firefox 4+ 和 Opera 中的“选择”样式继承.
+   */
+   
+  button,
+  select {
+    text-transform: none;
+  }
+   
+  button,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+  }
+   
+  /**
+   *重新设置禁用元素的默认光标。
+   */
+  button[disabled],
+  html input[disabled] {
+    cursor: default;
+  }
+   
+  [disabled] {
+    pointer-events: none;
+  }
+   
+  /**
+   * 1. 在 IE 8/9 中将地址框大小设置为 content-box。
+   */
+  input[type="checkbox"],
+  input[type="radio"] {
+    padding: 0;
+  }
+   
+  /**
+   * 1. 地址 Safari 5 和 Chrome 中的“appearance”设置为“searchfield”。
+   * 2.在 Safari 5 和 Chrome 中将“box-sizing”设置为“border-box”的地址
+   *    (include `-moz` to future-proof).
+   */
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+   
+  /**
+   * 删除 Safari 5 和 Chrome 中的内部填充和搜索取消按钮
+   * 在 OS X 上.
+   */
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+   
+  /**
+   * 删除 Firefox 3+ 中的内部填充和边框.
+   */
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+   
+  button {
+    border: 0;
+    background: transparent;
+  }
+   
+  textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+  }
+   
+  /**
+   * 删除表格单元格之间的大部分间距.
+   */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-indent: 0;
+  }
+   
+   
+  /**
+   *基于 normalize.css v8.0.1
+   * github.com/necolas/normalize.css
+   */
+  hr {
+    box-sizing: content-box;
+    overflow: visible;
+    background: #000;
+    border: 0;
+    height: 1px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    page-break-after: always;
+    width: 100%;
+  }
+   
+  /**
+   * 1. 更正所有浏览器中字体大小的继承和缩放。
+   */
+  pre {
+    font-family: monospace, monospace;
+    font-size: 100%;
+  }
+   
+  /**
+   * 删除 IE 10 中活动链接上的灰色背景。
+   */
+  a {
+    background-color: transparent;
+  }
+   
+  /**
+   * 1. 删除 Chrome 57- 中的下边框
+   * 2. 在 Chrome、Edge、IE、Opera 和 Safari 中添加正确的文本修饰.
+   */
+  abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+  }
+   
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: monospace, monospace;
+  }
+   
+  /**
+   * 在所有浏览器中添加正确的字体大小.
+   */
+  small {
+    font-size: 75%;
+  }
+   
+  /**
+   * 防止 'sub' 和 'sup' 元素影响
+   * 所有浏览器.
+   */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+   
+  sub {
+    bottom: -5px;
+  }
+   
+  sup {
+    top: -5px;
+  }
+   
+  /**
+   * 1. 更改所有浏览器中的字体样式.
+   * 2. 删除 Firefox 和 Safari 中的边距.
+   */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+   
+  /**
+   * 在 IE 中显示溢出.
+   * 1. 在 Edge 中显示溢出.
+   */
+  button,
+  input {
+    /* 1 */
+    overflow: visible;
+  }
+   
+  /**
+   * 删除 Edge、Firefox 和 IE 中文本转换的继承.
+   * 1. 删除 Firefox 中文本转换的继承.
+   */
+  button,
+  select {
+    /* 1 */
+    text-transform: none;
+  }
+   
+  /**
+   * 更正了无法在 iOS 和 Safari 中设置可点击类型样式的问题.
+   */
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+   
+  /**
+   * 删除Firefox中的内边框和内边距.
+   */
+   
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+    outline: 0;
+  }
+   
+   
+  legend {
+    color: inherit;
+    white-space: normal;
+   
+    display: block;
+    border: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+   
+  fieldset {
+    min-width: 0;
+  }
+   
+  body:not(:-moz-handler-blocked) fieldset {
+    display: block;
+  }
+   
+   
+  /**
+   * 在 Chrome、Firefox 和 Opera 中添加正确的垂直对齐方式。
+   */
+  progress {
+    vertical-align: baseline;
+  }
+   
+   
+  /**
+   * 更正 Chrome 中递增和递减按钮的光标样式.
+   */
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+   
+   
+  /**
+   * 1. 更正 Chrome 和 Safari 中的奇怪外观。
+   * 2. 更正 Safari 浏览器中的轮廓样式.
+   */
+  [type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+  }
+   
+  /**
+   * 在 macOS 上移除 Chrome 和 Safari 中的内部填充。
+   */
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+   
+  /**
+   * 1. 更正了无法在 iOS 和 Safari 中设置可点击类型样式的问题.
+   * 2. 在 Safari 中将字体属性更改为“继承”.
+   */
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+  }
+   
+  /* 互动
+     ========================================================================== */
+   
+  /*
+   *在所有浏览器中添加正确的显示。
+   */
+  summary {
+    display: list-item;
+  }
+   
+  /*
+   * Misc
+   * ========================================================================== */
+   
+  template {
+    display: none;
+  }
